@@ -1,0 +1,24 @@
+{
+	"outputError":"CEE",
+	"layers":
+		[{"Input":{
+			"nodes":"5",
+			"activation":"IDENTITY",
+			"addBias":"False"
+    	}},
+    	{"HL1":{
+			"nodes":"8",
+			"activation":"SIGMOID",
+			"addBias":"False"
+    	}},
+    	{"HL2":{
+			"nodes":"10",
+			"activation":"TANH",
+			"addBias":"True"
+    	}},
+    	{"Output":{
+			"nodes":"3",
+			"activation":"IDENTITY",
+			"addBias":"False"
+    	}}]
+}
