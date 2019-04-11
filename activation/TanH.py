@@ -1,12 +1,12 @@
-from Activation import Activation
 import math
 
-from com.aexp.ml.ann.activation.Sigmoid import Sigmoid
+from .Sigmoid import Sigmoid
 
 
 class TanH(Sigmoid):
 
     def __init__(self):
+        super(TanH, self).__init__()
         return
 
     def activation(self,record):

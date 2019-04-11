@@ -1,10 +1,9 @@
-from Activation import Activation
 import math
+
 import numpy as np
 import scipy
-from com.aexp.ml.ann.error.OutputError import OutputError
-from com.aexp.ml.ann.error.CrossEntropyError import CrossEntropyError
-from com.aexp.ml.ann.error.SquaredError import SquaredError
+
+from Activation import Activation
 
 
 class Sigmoid(Activation):

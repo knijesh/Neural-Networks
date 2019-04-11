@@ -1,5 +1,6 @@
 import abc as abc
 
+
 class OutputError(object):
     __metaclass__ = abc.ABCMeta
     @abc.abstractmethod

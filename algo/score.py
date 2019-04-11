@@ -1,6 +1,6 @@
-from utils.utils import Utils
 import numpy as np
-import math
+
+from utils.utils import Utils
 
 
 class Score(object):

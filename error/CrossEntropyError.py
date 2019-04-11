@@ -1,6 +1,7 @@
 from OutputError import *
 import numpy as np
 
+
 class CrossEntropyError(OutputError):
     def __init__(self, key, output, error):
         self.output = output[key]

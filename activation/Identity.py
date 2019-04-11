@@ -1,10 +1,10 @@
-from com.aexp.ml.ann.activation.Activation import Activation
-from com.aexp.ml.ann.activation.Sigmoid import Sigmoid
+from .Sigmoid import Sigmoid
 
 
 class Identity(Sigmoid):
 
     def __init__(self):
+        super(Identity, self).__init__()
         return
 
     def score(self,record):
