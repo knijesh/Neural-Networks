@@ -2,19 +2,20 @@ import math
 
 import numpy as np
 
-from algo.score import Score
+from FFbackprop.backprop import Score
 from utils.utils import Utils
 
 
 class Train(object):
 
-    def initParameters(self, regularization, momentum, batchsize, iteration, architecture):
+    def initParameters(self, regularization, momentum, batchsize, iteration, architecture,lrf):
 
         self.regularization = regularization
         self.momentum = momentum
         self.batchsize = batchsize
         self.iteration = iteration
         self.architecture = architecture
+        self.lrf = lrf
 
         self.learningRate = {}
 
@@ -31,9 +32,9 @@ class Train(object):
                 values.append(1.0 * rate / (2 ** (factor)))
 
             self.learningRate[x] = values
-            print self.learningRate
+          
 
-    def updateWeights(self, weights, previousUpdates, iteration, observation, indepData, depData, layers):
+    def weightsupdate(self, weights, previousUpdates, iteration, observation, indepData, depData, layers):
         self.score = Score()
         self.indepData = indepData
         self.depData = depData
@@ -44,8 +45,8 @@ class Train(object):
         self.utils = Utils()
         depData = self.depData[observation, :]
 
-        totDeltaWeights = self.utils.initZeroes(self.architecture, weights)
-        newWeights = self.utils.initZeroes(self.architecture, weights)
+        cumdeltaWeights = self.utils.initZeroes(self.architecture, weights)
+        modWeights = self.utils.initZeroes(self.architecture, weights)
         updates = self.utils.initZeroes(self.architecture, weights)
 
         for x in range(indepData.shape[0]):
