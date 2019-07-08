@@ -1,5 +1,0 @@
-#ShortName	LongName	TakesArgument	IsRequired	Description	ArgumentType
-sf	score-file	TRUE	TRUE	Path to Score file, which will be scored using a Trained Network.	String
-wf	weight-file	TRUE	TRUE	Path to weight file, which will contain all the weight matrices.	String
-ns	network-structure	TRUE	TRUE	Path to Network Strcture file, which will be used to create the Neural Network.	String
-osf	output-score-file	TRUE	TRUE	Path to Output file, which will be used to store the outputs for score records.	String
