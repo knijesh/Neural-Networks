@@ -25,8 +25,8 @@ You can implement a driver file to use this network:
  
 
 
-# Sample Binary Classifier
 
+### Sample Binary Classifier
 
 import numpy as np
 import pandas as pd
