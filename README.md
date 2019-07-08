@@ -3,7 +3,7 @@ A Fully connected FF BP Neural Network Library built from Ground up using vanill
 The library has been built for a multi layer perceptron and the structure of the network can be tweaked 
 by modifying the json file under data
 
-A command line parser has been built to invoke the deep learning framework under parser/cli_parser.py 
+A command line parser has been built to invoke the deep learning framework under parser/cli_parser.py . USe your own format_file.txt to create and build subparsers.
 
 All the activation functions are kept in activation/
 
