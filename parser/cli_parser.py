@@ -1,6 +1,4 @@
 """
-The File Contains the Class CommandlineParser;serving as the CommandlineParser for the Artificial
-Neural Network.The Driver Method is add_argument.Refer the method docstring for usage details
 
 __author__ = "Nijesh"
 """
@@ -12,7 +10,7 @@ import os
 
 class CommandLineParser(object):
 
-    def __init__(self, filename ="ann_1.0_score.txt", filepath ="parser"):
+    def __init__(self, filename ="format_file.txt, filepath ="parser"):
         """
         Args:
             filename:Build ro Score file Autoextracted
