@@ -41,7 +41,7 @@ weights = train.trainData(weights,index,indep,dep,layers)
 
 # In[ ]:
 
-offers = ['Offer_1','Offer_2]
+offers = ['Class_1','Class_2]
 scores = ['2', '1']
 
 score = Score()
@@ -56,7 +56,7 @@ output.to_csv(filename)
 
 # In[ ]:
 
-validData = pd.read_csv("data/validation_ger.csv", header=None)
+validData = pd.read_csv("data/test.csv", header=None)
 depData = validData.iloc[:, :2]
 indepData = validData.iloc[:, 2:]
 output, error = score.scoreData(weights, indepData,layers)
