@@ -1,27 +1,30 @@
 
+
+"""Sample Binary Classification."""
+
 import numpy as np
 import pandas as pd
 
 from NN import Neural_Network
-from algo.score import Score
-from algo.train import Train
+from ffprop.score import Score
+from ffprop.train import Train
 from weight.weights import Weights
 
 trainData = pd.read_csv("data/train.csv", header=None)
-####ADDing commandline PArser"
-"""parser = CommandLineParser()
-parser.add_argument()"""
+
+parser = CommandLineParser()
+parser.add_argument()
 
 
 # Initializing all the parameters
 
-batchsize = 5
-momentum = 0.7
+batchsize = 10
+momentum = 0.5
 regularization = 0.00025
-iteration = 5
+iteration = 10
 
-depData = trainData.iloc[:, :2]
-indepData = trainData.iloc[:, 2:]
+depData = trainData.iloc[:, :6]
+indepData = trainData.iloc[:, 7:]
 
 Weight1 = np.mat(pd.read_csv("data/weights1.csv", header=None).iloc[:, :5])
 Weight2 = np.mat(pd.read_csv("data/Weights2.csv", header=None).iloc[:, :2])
@@ -41,16 +44,15 @@ weights = train.trainData(weights,index,indep,dep,layers)
 
 # In[ ]:
 
-offers = ['Class_1','Class_2]
-scores = ['2', '1']
+classes = ['Class_1','Class_2]
 
 score = Score()
 
 output, error = score.scoreData(weights, indepData,layers)
 output = pd.concat([pd.DataFrame(depData), pd.DataFrame(output[2])], axis=1)
-output.columns = offers + scores
-filename = 'Insample_' + str(batchsize) + '_g' + '.csv'
-output.to_csv(filename)
+output.columns = offers 
+# filename = 'Insample_' + str(batchsize) + '_g' + '.csv'
+# output.to_csv(filename)
 
 # ##Outsample_Scoring
 
@@ -61,7 +63,7 @@ depData = validData.iloc[:, :2]
 indepData = validData.iloc[:, 2:]
 output, error = score.scoreData(weights, indepData,layers)
 output = pd.concat([pd.DataFrame(depData), pd.DataFrame(output[2])], axis=1)
-output.columns = offers + scores
+output.columns = offers
 
-filename = 'Outsample_' + str(batchsize) + '_g' + '.csv'
-output.to_csv(filename)
+# filename = 'Outsample_' + str(batchsize) + '_g' + '.csv'
+# output.to_csv(filename)
