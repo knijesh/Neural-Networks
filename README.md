@@ -14,7 +14,7 @@ The Weight folder has a initialized set of weights for testing.
 The Error folder has custom defined Errors.
 
 
-Lastly, the algo folder has the core algorithm and optimisers execution under algo/train and algo/score.
+Lastly, the FFbackprop folder has the core algorithm and optimisers execution under FFbackprop/train and FFbackprop/score.
 
 
 feel Free to reach out to me  for feedback.
@@ -41,10 +41,7 @@ trainData = pd.read_csv("data/train.csv", header=None)
 parser = CommandLineParser()
 parser.add_argument()
 
-batchsize = 10
-momentum = 0.5
-regularization = 0.00025
-iteration = 10
+batchsize = 10,momentum = 0.5,regularization = 0.00025,iteration = 10
 
 depData = "Dep rows"
 indepData = "Indep rows"
