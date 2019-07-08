@@ -25,7 +25,8 @@ You can implement a driver file to use this network:
  
 
 
-"""Sample Binary Classification."""
+# Sample Binary Classifier
+
 
 import numpy as np
 import pandas as pd
@@ -39,9 +40,6 @@ trainData = pd.read_csv("data/train.csv", header=None)
 
 parser = CommandLineParser()
 parser.add_argument()
-
-
-# Initializing all the parameters
 
 batchsize = 10
 momentum = 0.5
