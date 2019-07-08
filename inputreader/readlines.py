@@ -1,10 +1,5 @@
 '''
 
-The File is the Base file for the inputreader Factory Package of Artificial Neural Networks
-It consists of a class InputFileReader. Currently the Inputformats considered are only for csv and tsv
-
-Instantiate the Class and Use the Modules as described.
-
 '__author__' = 'Nijesh'
 
 '''
@@ -37,12 +32,7 @@ class InputFileReader(object):
     def read_file(self):
         """
         # To get the full list of input file use read_file()
-        ###USAGE###
-        from readlines import  InputFileReader
-        inputfilereader = InputFileReader('C:\ANN\ANN_Source\InputReaderFactory\Data','tsv',4,'nasa_19950801.tsv',0,"\t"
-        ----------------------------
-        inputfilereader.read_file()
-        """
+  
         inputfilelist = []
         with open(self.full_path) as infile:
             read = csv.reader(infile, delimiter=self.delimiter)
