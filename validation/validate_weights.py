@@ -1,8 +1,4 @@
 """
-The File Contains the Class WeightValidate which takes care of different types of Validation
-of the final Weight file. The Class ValidationError is used to create a custom Exception for
-Validation Errors.
-Driver Function to Use for Validation : validate().See the docstring for more info
 
 __author__ ='Nijesh'
 
@@ -65,7 +61,7 @@ class WeightValidate(object):
         Static Method for getting network structure
         :return: shape of network from networks.txt file
         """
-        networkpath = os.path.abspath('../config/NNStructure.txt')
+        networkpath = os.path.abspath('../data/DNN.txt')
         with open(networkpath, 'r') as jsonfile:
             content = json.load(jsonfile)
             list_layers = content['layers']
